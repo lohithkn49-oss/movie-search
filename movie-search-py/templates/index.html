@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movie Search</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main>
+  <h1>Movie Search</h1>
+  <form id="form">
+    <input id="query" type="search" placeholder="Search movies…" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <p id="status"></p>
+  <div id="results" class="grid"></div>
+  <div class="pager">
+    <button id="prev" disabled>Previous</button>
+    <span id="page"></span>
+    <button id="next" disabled>Next</button>
+  </div>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
